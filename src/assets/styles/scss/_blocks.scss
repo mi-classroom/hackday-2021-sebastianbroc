@@ -7,11 +7,26 @@
   src: url('/src/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
 }
 
+@media only screen and (min-width: $vp-medium+1){
+  .card-image-with-caption {
+    width: 20vw;
+  }
+}
+
+
+@media only screen and (max-width: $vp-medium){
+  .card-image-with-caption {
+    width: 40vw;
+  }
+}
+
+
 .card-image-with-caption {
-  width: 30vw;
+  height: 70vh;
+  //width: 40vw;
   border-radius: none;
   overflow: hidden;
-  //background-color: #000;
+  background-color: #000;
   position: relative;
 
   >img {
@@ -32,8 +47,8 @@
     background-color: #000000;
     
     >p{
-      font-size: 2em;
-      font-family:'Roboto'; //Klappt aus irgendeinem Grund noch nicht
+      font-size: 1.5em;
+      font-family:'Roboto-regular'; //Klappt aus irgendeinem Grund noch nicht
     }
 
 
@@ -149,6 +164,7 @@
 ############################################################################ */
 
 .image-description{
+  display: row;
   padding: 0;
   margin: 0;
 

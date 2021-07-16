@@ -18,6 +18,26 @@ main{
   margin-bottom: $xl;
 }
 
+#overview{
+  padding: 20px;
+  display:grid;
+  gap: 10px 0px;;
+}
+
+
+@media only screen and (min-width: $vp-medium+1){
+  #overview{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media only screen and (max-width: $vp-medium){
+  #overview{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 a {
   color: $accent;
   text-decoration: none;

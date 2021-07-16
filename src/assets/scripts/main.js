@@ -5,16 +5,44 @@ function formValidator() {
 
   let checkForm = function (form) {
     
-    console.log(form);
+    //console.log(form);
 
-    /* Hier bitte die Validierung einfügen 
-    
-    …
-    …
-    …
+    /* Hier bitte die Validierung einfügen*/
 
-    */
+    let error = false;
+    let errorobject = null; //Objekt, welches Fehler auslöst
+
     
+    //Das ist ultra hässlich programmiert und geht mit einem query selector sicherlich schöner ^^
+    form.dateiart.removeAttribute('class');
+    form.beschreibung.removeAttribute('class');
+    form.rechte.removeAttribute('class');
+    form.quelle.removeAttribute('class');
+    form.datum.removeAttribute('class');
+    
+    if(form.dateiart.value == ""){
+      error = true;
+      errorobject = form.dateiart;
+    } else if(form.beschreibung.value == ""){
+      error = true;
+      errorobject = form.beschreibung;
+    } else if(form.rechte.value == ""){
+      error = true;
+      errorobject = form.rechte;
+    } else if(form.quelle.value == ""){
+      error = true;
+      errorobject = form.quelle;
+    } else if(form.datum.value == ""){
+      error = true;
+      errorobject = form.datum;
+    }
+
+    console.log(errorobject);
+    
+    if(error){
+      errorobject.setAttribute('class','ut-has-error');
+    }
+
   }
 
   this.scan = function () { 

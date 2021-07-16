@@ -26,6 +26,7 @@ dd {
 h1 {
     font-size: $xl;
     transition: 0.5s;
+    font-family: 'Roboto-light';
 }
 
 h2 {
@@ -34,6 +35,7 @@ h2 {
 
 h3 {
     font-size: $m;
+    color: $accent;
 }
 
 .herotext {

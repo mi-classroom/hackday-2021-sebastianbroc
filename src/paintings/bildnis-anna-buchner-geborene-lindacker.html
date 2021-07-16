@@ -11,6 +11,7 @@ braucht:
   $altText(:String): Alternativtext 
   $caption(:String): Bildunterschrift (optional)
 -->
+    <div>
 
     <figure class="image-with-caption">
       <img
@@ -19,6 +20,32 @@ braucht:
         sizes="(min-width: 50em) 33vw, (min-width: 28em) 50vw, 100vw" alt="Bildnis Anna Buchner, geborene Lindacker">
     </figure>
 
+    <div class="metadatenformular">
+      <form id="metadata">
+        
+        <input type="text" id="dateiart">
+        <label for="dateiart">Dateiart</label>
+
+        <textarea name="beschreibung" form="metadata" id="beschreibung"></textarea>
+        <label for="beschreibung">Beschreibung</label>
+        
+        <input type="text" id="rechte">
+        <label for="rechte">Abbildung Rechte</label>
+
+        <input type="text" id="quelle">
+        <label for="quelle">Abbildung Quelle</label>
+
+        <input type="date" id="datum" value="tt-mm-jjjj">
+        <label for="datum">Datum</label>
+
+        <div id="buttons">
+        <input type="reset" value="abbrechen">
+        <input type="submit" value="speichern">
+        </div>
+      </form>
+    </div>
+
+    </div>
     <!--
 Doku: tbd.
 -->
@@ -73,8 +100,8 @@ Doku: tbd.
         [http://www.artsmia.org/viewer/detail.php?v=12&id=1324 (accessed 03.05.2012)]</p>
     </div>
 
-    <div>
-    </div>
+    
+
   </article>
 
 </main>

@@ -31,11 +31,19 @@ h1 {
 
 h2 {
     font-size: $l;
+    color: $lighter;
 }
 
 h3 {
     font-size: $m;
-    color: $accent;
+    color: $lighter;
+    //border-top: solid $accent 3px;
+}
+
+#border {
+    width: 60px;
+    border-top: solid $accent 3px;
+    padding-bottom: 20px;
 }
 
 .herotext {

@@ -2,25 +2,40 @@
 /* Card Image with Caption
 ############################################################################ */
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('/src/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
 .card-image-with-caption {
-  
-  border-radius: $border-radius;
+  width: 30vw;
+  border-radius: none;
   overflow: hidden;
-  background-color: #000;
+  //background-color: #000;
   position: relative;
-  
+
   >img {
     width: 100%;
   }
 
   >figcaption {
-    position: absolute;
+    
+    position: relative;
     bottom: 0;
     right: 0;
     left: 0;
     padding: $m;
     padding-top: $xl;
     padding-bottom: $xs;
+
+    margin-top: 2px;
+    background-color: #000000;
+    
+    >p{
+      font-size: 2em;
+      font-family:'Roboto'; //Klappt aus irgendeinem Grund noch nicht
+    }
+
 
     >.additional-info {
       display: none;
@@ -126,7 +141,8 @@
     width: 100%;
   }
 
-  >figcaption {}
+  >figcaption {
+  }
 }
 
 /* Image Description
